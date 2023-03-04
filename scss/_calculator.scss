@@ -1,0 +1,88 @@
+div.calculator{
+    background: white;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+
+    div.calculator-display{
+        background: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+        h1{
+            margin: 0;
+            padding: 25px;
+            font-size: 45px;
+            font-family: 'Lucida Console', sans-serif;
+            font-weight: 100;
+            overflow-x: scroll;
+        }
+    }
+
+    div.calualator-buttons{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 10px;
+        padding: 10px;
+        button{
+            min-height: 50px;
+            font-size: 20px;
+            font-weight: 100;
+            border: none;
+            border-radius: 5px;
+            background: rgb(206, 205, 205);
+            cursor: pointer;
+            &:hover{
+                filter: brightness(110%);
+            }
+            &:active{
+                transform: translateY(1px);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+
+        button.operator{
+            background: gray;
+            color: white;
+            font-size: 30px;
+        }
+
+        button.clear{
+            background: rgb(226, 69, 69);
+            color: white;
+            &:hover{
+                filter: brightness(90%);
+            }
+        }
+
+
+        button.equal-sign{
+            grid-column: -2;
+            grid-row: 2 / span 4;
+            background: #48df46;
+        }
+    }
+}
+
+// customer scrollBar
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 

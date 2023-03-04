@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.calculator {
+  background: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+div.calculator div.calculator-display {
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+}
+div.calculator div.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: "Lucida Console", sans-serif;
+  font-weight: 100;
+  overflow-x: scroll;
+}
+div.calculator div.calualator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+div.calculator div.calualator-buttons button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  background: rgb(206, 205, 205);
+  cursor: pointer;
+}
+div.calculator div.calualator-buttons button:hover {
+  filter: brightness(110%);
+}
+div.calculator div.calualator-buttons button:active {
+  transform: translateY(1px);
+}
+div.calculator div.calualator-buttons button:focus {
+  outline: none;
+}
+div.calculator div.calualator-buttons button.operator {
+  background: gray;
+  color: white;
+  font-size: 30px;
+}
+div.calculator div.calualator-buttons button.clear {
+  background: rgb(226, 69, 69);
+  color: white;
+}
+div.calculator div.calualator-buttons button.clear:hover {
+  filter: brightness(90%);
+}
+div.calculator div.calualator-buttons button.equal-sign {
+  grid-column: -2;
+  grid-row: 2/span 4;
+  background: #48df46;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 600px) {
+  div.calculator {
+    width: 95%;
+  }
+}/*# sourceMappingURL=all.css.map */
